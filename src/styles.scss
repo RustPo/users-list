@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+@import "fonts";
+
+:root{
+  /* const */
+  --max-w: 800px;
+
+  /* colors */
+  --bg: #000;
+  --bg-secondary: #222;
+  --primary: #007bff;
+  --color-white: #fff;
+  --border-primary: #fff;
+  --border-secondary: #222;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background: var(--bg);
+  color: var(--color-white);
+  font-family: "JetBrains Mono", sans-serif;
+}
+
+
+.container {
+  margin: auto;
+  max-width: var(--max-w);
+}
+

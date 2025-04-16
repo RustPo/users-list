@@ -1,0 +1,8 @@
+<app-resource
+    *ngFor="let resource of resources.getValue(); let last = last"
+    [resource]="resource"
+/>
+
+<h1 *ngIf="loading">Loading...</h1>
+
+<div #anchor></div>

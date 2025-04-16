@@ -1,4 +1,10 @@
-@if (text) {
-    <button class="primary-btn">{{text}}</button>
-}
-
+<button
+    [disabled]="disabled"
+    [style.opacity]="disabled ? 0.5 : 1"
+    [ngClass]="{ 'destructive': variant === 'destructive' }"
+    (click)="onClick()"
+    [type]="type ? type : 'button'"
+    class="primary-btn"
+>
+    {{text}}
+</button>

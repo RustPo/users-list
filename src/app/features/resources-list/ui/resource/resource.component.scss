@@ -1,0 +1,13 @@
+.resource {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    border: 1px solid var(--border-primary);
+    border-radius: 4px;
+    padding: 16px;
+
+    &__name {
+        font-weight: bold;
+    }
+}

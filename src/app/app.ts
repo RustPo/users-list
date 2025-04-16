@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {Button} from "./shared/ui/button/button";
-import {Title} from "./shared/ui/title/title";
+import { ErrorMessageComponent } from '@shared/ui/error-message';
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet, Button, Title],
-  templateUrl: './app.html',
-  styleUrl: './app.scss'
+    selector: 'app-root',
+    imports: [RouterOutlet, ErrorMessageComponent],
+    templateUrl: './app.html',
+    styleUrl: './app.scss',
 })
-export class App {
-}
+export class App {}

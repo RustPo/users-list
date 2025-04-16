@@ -1,0 +1,16 @@
+.user-page {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .user {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        &__actions {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+}

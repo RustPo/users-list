@@ -1,0 +1,22 @@
+<div class="user">
+    <div class="user__avatar">
+        <img [src]="user.avatar" alt="avatar" />
+    </div>
+    <div class="user__info">
+        <div class="user__name">
+            <div>Имя: {{ user.first_name }}</div>
+            <div>Фамилия: {{ user.last_name }}</div>
+        </div>
+        <div class="user__detail">
+            <div class="user_id">ID: {{ user.id }}</div>
+            <div class="user__email">Почта: {{ user.email }}</div>
+        </div>
+    </div>
+    <div class="user__actions">
+        <app-button
+            navigateLink="/users/{{ user.id }}"
+            [text]="'Перейти в профиль'"
+        />
+        <app-delete-user [id]="user.id" />
+    </div>
+</div>

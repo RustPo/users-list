@@ -1,0 +1,12 @@
+.not-found {
+    height: 100vh;
+    margin: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 16px;
+
+    max-width: 500px;
+}

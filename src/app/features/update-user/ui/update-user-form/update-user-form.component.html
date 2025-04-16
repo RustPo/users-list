@@ -1,0 +1,38 @@
+<form
+    action=""
+    [formGroup]="form"
+    (ngSubmit)="onSubmit($event)"
+    class="edit-user-form"
+>
+    <label class="edit-user-form__label">
+        Имя
+        <input
+            class="edit-user-form__input"
+            type="text"
+            formControlName="name"
+            placeholder="Введите имя"
+        />
+    </label>
+
+    <label class="edit-user-form__label">
+        Должность
+        <input
+            class="edit-user-form__input"
+            type="text"
+            formControlName="job"
+            placeholder="Введите должность"
+        />
+    </label>
+
+    <app-button
+        [disabled]="fetching"
+        [type]="'submit'"
+        [variant]="'destructive'"
+        [text]="'Сохранить'"
+    />
+    <app-button
+        *ngIf="!fetching"
+        [text]="'Отменить'"
+        [navigateLink]="appRoutes.userPageById(id)"
+    />
+</form>

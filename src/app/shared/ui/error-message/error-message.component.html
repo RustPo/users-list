@@ -1,0 +1,7 @@
+<div *ngIf="errorService.error$ | async as error" class="error-message">
+    {{ error }}
+
+    <div (click)="errorService.clear()" class="error-message__close">
+        &times;
+    </div>
+</div>

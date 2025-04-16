@@ -1,0 +1,4 @@
+<div class="users-list">
+    <app-user *ngFor="let user of users" [user]="user" />
+    <h1 *ngIf="loading">Loading...</h1>
+</div>

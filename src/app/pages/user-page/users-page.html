@@ -1,0 +1,30 @@
+<div class="user-page">
+    <app-title [title]="'Профиль пользователя'" />
+    <h1 *ngIf="fetching">Loading...</h1>
+    <div *ngIf="user" class="user">
+        <div class="user__avatar"><img [src]="user.avatar" alt="avatar" /></div>
+        <div class="user__info">
+            <div class="user__name">
+                <div>Имя: {{ user.first_name }}</div>
+                <div>Фамилия: {{ user.last_name }}</div>
+            </div>
+            <div class="user__detail">
+                <div class="user_id">ID: {{ user.id }}</div>
+                <div class="user__email">Почта: {{ user.email }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="user__actions">
+        <app-button
+            *ngIf="user"
+            [navigateLink]="appRoutes.editUserById(user.id)"
+            [variant]="'destructive'"
+            [text]="'Изменить'"
+        />
+
+        <app-button
+            [navigateLink]="appRoutes.usersList()"
+            [text]="'На главную'"
+        />
+    </div>
+</div>

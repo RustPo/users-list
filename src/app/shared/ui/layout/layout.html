@@ -1,4 +1,14 @@
-<div class="container">
-  <router-outlet/>
+<div class="container layout">
+    <nav class="layout__navigation">
+        <app-button
+            [navigateLink]="appRoutes.usersList()"
+            [text]="'Список пользователей'"
+        />
+        <app-button
+            [navigateLink]="appRoutes.resourcesList()"
+            [text]="'Список ресурсов'"
+        />
+        <app-logout-button />
+    </nav>
+    <router-outlet />
 </div>
-
